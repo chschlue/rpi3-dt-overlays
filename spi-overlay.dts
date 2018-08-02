@@ -1,0 +1,46 @@
+// Enable spi
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "brcm,bcm2710";
+
+	fragment@0 {
+		target-path = "/soc/spi@7e204000";
+		__overlay__ {
+			status = "okay";
+			spi-max-frequency = <2000000>;
+			spidev@0 {
+				compatible = "spidev";
+				spi-max-frequency = <2000000>;
+				reg = <0>;
+			};
+		};
+	};
+
+	fragment@1 {
+		target-path = "/soc/spi@7e215080";
+		__overlay__ {
+			status = "okay";
+			spi-max-frequency = <2000000>;
+			spidev@0 {
+				compatible = "spidev";
+				spi-max-frequency = <2000000>;
+				reg = <0>;
+			};
+		};
+	};
+
+	fragment@2 {
+		target-path = "/soc/spi@7e2150c0";
+		__overlay__ {
+			status = "okay";
+			spi-max-frequency = <2000000>;
+			spidev@0 {
+				compatible = "spidev";
+				spi-max-frequency = <2000000>;
+				reg = <0>;
+			};
+		};
+	};
+};
